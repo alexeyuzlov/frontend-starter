@@ -6,8 +6,6 @@ const helpers = require('./helpers');
 
 module.exports = function () {
     return {
-        mode: 'development',
-
         entry: './src/scripts/index.ts',
 
         output: {
