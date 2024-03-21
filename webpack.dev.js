@@ -13,37 +13,17 @@ module.exports = function () {
             chunkFilename: '[id].chunk.js'
         },
 
-        module: {
-            rules: [
-                {
-                    test: /\.ts$/,
-                    use: [
-                        {
-                            loader: 'tslint-loader',
-                            options: {
-                                configFile: helpers.root('tslint.json')
-                            }
-                        }
-                    ],
-                    include: [helpers.root('src')]
-                },
-            ]
-        },
         devServer: {
             static: {
                 directory: helpers.root('src/'),
             },
             open: true,
-            proxy: {
-                // [`${configLib.PROXY_PATH}**`]: {
-                //     target: METADATA.API_URL,
-                //     secure: false,
-                //     changeOrigin: true,
-                //     pathRewrite: {
-                //         [`^${configLib.PROXY_PATH}`]: ''
-                //     }
-                // }
-            },
+            proxy: [
+                {
+                    context: ['/api'],
+                    target: 'http://localhost:3000',
+                },
+            ],
             port: 7375,
             historyApiFallback: true
         },
