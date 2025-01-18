@@ -1,27 +1,55 @@
-# frontend-starter
+# Frontend Starter
+
+## Overview
+Frontend Starter is a simple, pre-configured setup for frontend development using TypeScript and SCSS. It provides essential tools and configurations to kickstart your project with ease.
+
+## Features
+- **TypeScript**: For robust, type-safe JavaScript development.
+- **SCSS**: For enhanced CSS with variables, nesting, and mixins.
+- **Live Development Server**: Instant updates during development.
+- **Production Builds**: Optimized assets ready for deployment.
+- **Linting**: Maintain code quality and consistency.
 
 ## Setup
-```
-npm i
-```
+1. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-### Dev
-```
+## Development
+Start the development server with live reloading:
+```bash
 npm start
 ```
 
-### Build
-```
-npm run build:dev
-npm run build:prod
-```
+## Building the Project
+- For development builds:
+    ```bash
+    npm run build:dev
+    ```
+- For production builds:
+    ```bash
+    npm run build:prod
+    ```
 
-### CI
-```
+## Continuous Integration (CI)
+Run all necessary checks and builds for CI:
+```bash
 npm run ci
 ```
 
-### Lint
-```
+## Linting
+Check and fix code quality issues:
+```bash
 npm run lint
 ```
+
+## Contributing
+Contributions are welcome! Open issues or submit pull requests to enhance this starter.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+Happy coding!
+
